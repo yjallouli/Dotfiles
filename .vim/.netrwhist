@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/younes/.config/termite'
+let g:netrw_dirhist_2='/home/younes/.config/polybar'
+let g:netrw_dirhist_3='/home/younes/Downloads/config'
+let g:netrw_dirhist_4='/home/younes/Downloads/config/i3'
+let g:netrw_dirhist_5='/home/younes/Downloads/config'
+let g:netrw_dirhist_6='/home/younes/Downloads/config/i3'
+let g:netrw_dirhist_7='/home/younes/.config/termite'
+let g:netrw_dirhist_8='/home/younes/.config'

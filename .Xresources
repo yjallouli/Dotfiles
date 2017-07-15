@@ -21,12 +21,13 @@ XTerm*pointerColor: #16A085
 XTerm*faceName: Fixed
 XTerm*faceSize: 11
 
+
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #b4ac5d, #002b37, #003642, #b4ac5d
+rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
 

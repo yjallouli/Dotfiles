@@ -16,7 +16,7 @@ font pango:System San Francisco Display 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -100,9 +100,11 @@ bindsym $mod+agrave workspace $workspace10
 
 # Assigning programs to workspaces
 assign [class=Firefox] $workspace1
-assign [class=Xfce4-terminal] $workspace2
+assign [class=Termite] $workspace2
+assign [class=jetbrains-webstorm] $workspace3
 assign [class=Thunar] $workspace4
 assign [class=KeePass2] $workspace5
+
 # Disabling title bar in all workspaces for all programs
 for_window [class="^.*"] border pixel 0
 
@@ -174,17 +176,13 @@ hide_edge_borders both
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Lock screen
-bindsym $mod+shift+x exec ~/.config/i3/lock.sh
+bindsym $mod+x exec ~/.config/i3/lock.sh
 
 # Lock screen on laptop lid closing
-exec_always xss-lock -- i3lock --insidevercolor=ffffff1c --insidewrongcolor=ffffff1c --insidecolor=0000001c --ringvercolor=ffffff00 --ringwrongcolor=ffffff55 --ringcolor=0000003e --textcolor=00000000 --linecolor=00000000 --keyhlcolor=29d514ec --bshlcolor=ff8000ff -i ~/.config/i3/desktop.png -t --no-composite
-
-
-# Autolock screen after 5 minutes
-exec_always --no-startup-id xautolock -time 5 -locker ~/.config/i3/lock.sh -notify 30 -notifier "notify-send -- 'LOCKING screen in 30 seconds'" -corners "notify-send -- 'Disabling autolock'" -cornersize 50
+exec_always xss-lock -- ~/.config/i3/lock.sh
 
 # Program runner
-bindsym $mod+r exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "70" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "9f78e1" -hlfg "#f7888" -font "System San Francisco Display 18"
+bindsym $mod+r exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -font "System San Francisco Display 18"
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec python ~/.config/i3/volume.py +
@@ -192,8 +190,8 @@ bindsym XF86AudioLowerVolume exec python ~/.config/i3/volume.py -
 bindsym XF86AudioMute exec python ~/.config/i3/volume.py mute
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Keyboard light controls
 bindsym XF86KbdBrightnessUp exec python ~/.config/i3/keyboard_light.py +
@@ -201,9 +199,6 @@ bindsym XF86KbdBrightnessDown exec python ~/.config/i3/keyboard_light.py -
 
 # Switch monitors
 bindsym $mod+Shift+s exec ~/.config/i3/monitor.sh
-
-# Print screen : creates a screenshot in Pictures folder
-bindsym Print exec import -window root ~/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 
 # Desktop Wallpaper configuration
 exec_always feh --bg-scale ~/.config/i3/desktop.png
@@ -214,12 +209,11 @@ exec_always xrandr --output eDP1 --mode 1920x1080
 # Running compton
 exec_always --no-startup-id compton --config ~/.config/compton.conf
 
-# Wifi applet
-exec_always nm-applet
-
-# Flux in the background
-exec_always ~/.config/i3/flux.sh
+# Flux in the background (after killing old flux instances)
+exec_always kill -9 $(pgrep xflux) && xflux -l 48.8
 
 # Low battery notification
 exec_always ~/.config/i3/battery_notification.sh
 
+# Turning off screensaver to prevent it from running while videos are playing
+exec_always xset s off
