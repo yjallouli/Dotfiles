@@ -101,3 +101,8 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+# binding keys
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
