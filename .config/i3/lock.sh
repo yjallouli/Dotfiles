@@ -1,6 +1,6 @@
 #!/bin/bash
 
-notify-send 'L    O    C    K    I    N    G'
+notify-send --icon=system-lock-screen "LOCKING" "Please wait ... "
 
 BLURTYPE="0x8"
 DISPLAY_RE="([0-9]+)x([0-9]+)\\+([0-9]+)\\+([0-9]+)"
