@@ -6,7 +6,7 @@
 set $mod Mod4
 
 # Gaps between windows
-gaps inner 20
+gaps inner 15
 smart_gaps on
 
 # Font for window titles
