@@ -1,14 +1,11 @@
 # Solarized dark color scheme
 
 [colors]
-foreground = #839496
-foreground_bold = #eee8d5
-#foreground_dim = #888888
-background = rgba(00, 43, 54, 0.9)
-cursor = #93a1a1
 
-# if unset, will reverse foreground and background
-#highlight = #839496
+foreground = #FFFFFF
+foreground_bold = #FFFFFF
+background = rgba(00, 43, 54, 0.85)
+cursor = #93a1a1
 
 # colors from color0 to color254 can be set
 color0 = #073642
@@ -23,7 +20,7 @@ color8 = #002b36
 color9 = #cb4b16
 color10 = #586e75
 color11 = #657b83
-color12 = #839496
+color12 = #FFFFFF
 color13 = #6c71c4
 color14 = #93a1a1
 color15 = #fdf6e3
