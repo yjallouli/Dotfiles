@@ -8,6 +8,6 @@ while True :
     battery_percentage = int(str(battery_information).split(", ")[1].strip('%'))
 
     if battery_percentage <= 10 and battery_status == 'Discharging':
-        os.system('notify-send "L O W   B A T T E R Y" "      Plug your cable" -t 10000')
+        os.system('notify-send --icon=gtk-info "L O W   B A T T E R Y" "      Plug your cable" -t 10000')
 
     sleep(10)
