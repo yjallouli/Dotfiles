@@ -121,5 +121,7 @@ prompt_context() {
 }
 
 # binding keys
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
