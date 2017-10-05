@@ -205,7 +205,7 @@ exec_always --no-startup-id compton --config ~/.config/compton.conf
 exec_always kill -9 $(pgrep xflux) && xflux -l 48.8
 
 # Low battery notification
-exec_always ~/.config/i3/battery_notification.sh
+exec_always python ~/.config/i3/battery_notification.py
 
 # Turning off screensaver to prevent it from running while videos are playing
 exec_always xset s off
