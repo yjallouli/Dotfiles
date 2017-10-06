@@ -208,4 +208,7 @@ exec_always kill -9 $(pgrep xflux) && xflux -l 48.8
 exec_always python ~/.config/i3/battery_notification.py
 
 # Turning off screensaver to prevent it from running while videos are playing
-exec_always xset s off
+exec_always xset s off -dpms
+
+# Turn off system bell
+exec_always xset b off
