@@ -171,7 +171,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 bindsym $mod+x exec ~/.config/i3/lock.sh
 
 # Lock screen on laptop lid closing
-exec_always xss-lock -- ~/.config/i3/lock.sh
+exec_always xss-lock -- ~/.config/i3/lock2.sh
 
 # Program runner
 bindsym $mod+r exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -font "System San Francisco Display 18"
