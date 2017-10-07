@@ -27,7 +27,6 @@ XTerm*faceSize: 11
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 rofi.color-window: #002b37, #002b37, #003642
-rofi.color-normal: #002b37, #b4ac5d, #002b37, #003642, #b4ac5d
+rofi.color-normal: #002b37, #FFFFFF, #002b37, #003642, #FFFFFF
 rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
 rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
-
