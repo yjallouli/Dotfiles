@@ -198,6 +198,9 @@ exec_always feh --bg-scale ~/.config/i3/desktop.png
 # Screen resolution
 exec_always xrandr --output eDP1 --mode 1920x1080
 
+# Load Xresources file
+exec_always xrdb ~/.Xresources
+
 # Running compton
 exec_always --no-startup-id compton --config ~/.config/compton.conf
 
